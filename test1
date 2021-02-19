@@ -1,0 +1,20 @@
+import numpy as np
+import random
+
+print("Vvedite chislo massivov")
+x = int(input())
+c = 0
+b = 50
+e = 50
+m = 1
+while c < x:
+    s = random.randint(m, e)  
+    a = np.random.randint(m, b, s)
+    if c % 2 == 0:
+        print(sorted(a, reverse=True, key=None))
+    else:
+        print(sorted(a, reverse=False, key=None))
+    c = c + 1
+    e = e + 20
+    b = b + 100
+    m = m + 15
