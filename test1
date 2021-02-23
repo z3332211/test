@@ -1,20 +1,22 @@
 import numpy as np
 import random
 
-print("Vvedite chislo massivov")
+print("Enter the number of arrays")
 x = int(input())
 c = 0
-b = 50
-e = 50
-m = 1
+smin = 1
+smax = 20
+amin = 0
+amax = 50
 while c < x:
-    s = random.randint(m, e)  
-    a = np.random.randint(m, b, s)
+    s = random.randint(smin, smax)  
+    a = np.random.randint(amin, amax, s) 
     if c % 2 == 0:
         print(sorted(a, reverse=True, key=None))
     else:
         print(sorted(a, reverse=False, key=None))
     c = c + 1
-    e = e + 20
-    b = b + 100
-    m = m + 15
+    smin = smin + 20    
+    smax = smax + 20   
+    amin = amin + 100 
+    amax = amax + 100  
